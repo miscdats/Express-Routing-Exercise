@@ -11,9 +11,9 @@ router.get('/all', function(req, res, next) {
 });
 
 router.get('/:aColor', function(req, res, next) {
-  for (key in colors[0]) {
-    if (colors[0].color == ('aColor')) {
-      res.send(req.params.aColor);
+  for (c in colors.colors) {
+    if (colors.colors[c].color == req.params.aColor) {
+      res.json(colors.colors[c]);
     }
   }
 });
