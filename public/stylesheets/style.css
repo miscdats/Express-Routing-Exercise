@@ -8,17 +8,26 @@ a {
   color: #00B7FF;
 }
 
-#redplace {
-  background-color: red;
+h3 {
+  font-size: 9.5rem;
+  margin: auto;
+  font-family: 'Metal Mania', cursive;
+}
+
+#place {
   height: 300px;
   width: 325px;
   padding: inherit;
+}
+
+.redplace {
+  background: red;
   color: blue;
   border: 10px dashed blue;
 }
 
-#redplace h3 {
-  font-size: 10rem;
-  margin: auto;
-  font-family: 'Metal Mania', cursive;
+.blueplace {
+  background: blue;
+  color: red;
+  border: 10px dashed red;
 }

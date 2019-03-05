@@ -1,11 +1,12 @@
 extends layout
 
-block content
+block scripts
+  script(src='/jquery/jquery.js')
+  script(src='javascripts/route1.js')
   link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Metal+Mania')
+
+block content
   h1= title
 
-  #redplace
-    h3 BLUE
-
-block scripts
-  script(src='javascripts/route1.js')
+  #place.redplace
+      h3 BOOP
