@@ -12,14 +12,16 @@ router.get('/all', function(req, res, next) {
 
 router.get('/:aColor', function(req, res, next) {
   var exists = false;
+  var aColor = req.params.aColor.toLowerCase();
+
   for (no in colors.colors) {
-    if (req.params.aColor == colors.colors[no].color)  {
+    if (aColor == colors.colors[no].color)  {
       exists = true;
     }
   }
   if (exists == true) {
     for (c in colors.colors) {
-      if (colors.colors[c].color == req.params.aColor) {
+      if (colors.colors[c].color == aColor) {
         res.json(colors.colors[c]);
       }
     }
