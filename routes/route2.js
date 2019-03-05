@@ -11,10 +11,21 @@ router.get('/all', function(req, res, next) {
 });
 
 router.get('/:aColor', function(req, res, next) {
-  for (c in colors.colors) {
-    if (colors.colors[c].color == req.params.aColor) {
-      res.json(colors.colors[c]);
+  var exists = false;
+  for (no in colors.colors) {
+    if (req.params.aColor == colors.colors[no].color)  {
+      exists = true;
     }
+  }
+  if (exists == true) {
+    for (c in colors.colors) {
+      if (colors.colors[c].color == req.params.aColor) {
+        res.json(colors.colors[c]);
+      }
+    }
+  } else if (exists == false) {
+    res.status(404)
+      .send('idk');
   }
 });
 
